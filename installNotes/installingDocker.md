@@ -1,11 +1,11 @@
-## Install docker -- Various Environments  
-  
+# Install docker -- Various Environments  
+
 ## Install docker-ce on Ubuntu 18.04  
 
 Don't use the Docker installation package available in the official Ubuntu 18.04 repository (it will not reliably be the latest version).  
 Instead install the latest Docker package from Docker’s repositories.  
 
-# Enabling Docker repository  
+## Enabling Docker repository  
 
 a. Update the packages list and install the dependencies necessary to add a new repository over HTTPS:  
 
@@ -15,7 +15,7 @@ sudo apt install apt-transport-https ca-certificates curl gnupg-agent software-p
 
 b. Import the repository’s GPG key with:  
 
-```curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+```curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -  
 ```
 
 c. Add the Docker APT repository with:  
@@ -25,7 +25,7 @@ c. Add the Docker APT repository with:
 
 ## Install docker-ce  
 
-Install the latest version of Docker with: 
+Install the latest version of Docker with:  
 
 ```sudo apt update  
 sudo apt install docker-ce  
@@ -115,7 +115,7 @@ Before you uninstall Docker remove all your containers, images, volumes, and net
 
 Uninstall Docker using standard package removal practices with apt:  
 
-```sudo apt purge docker-ce
+```sudo apt purge docker-ce  
 sudo apt autoremove  
 ```
 
