@@ -144,25 +144,30 @@ Initial notes:
 
 Update apt with:  
 
-```sudo apt update
+```
+sudo apt update
 ```
 Get your platform up-to-date with:  
 
-```sudo apt upgrade
+```
+sudo apt upgrade
 ```
 NOTE: kernel upgrades need a reboot with:  
 
-```sudo reboot
+```
+sudo reboot
 ```
 Install Docker with:  
 
-```sudo apt install docker.io
+```
+sudo apt install docker.io
 ```
 For a variety of reasons, you may not want to run docker as root or grant users sudo permissions.  
 
 If you already have a docker group, add users to it with:  
 
-```sudo usermod -a -G docker $USER
+```
+sudo usermod -a -G docker $USER
 ```
 
 ## Operating Docker
