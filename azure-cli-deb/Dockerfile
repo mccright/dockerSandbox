@@ -1,5 +1,6 @@
 FROM python:3.7-slim-buster
 LABEL maintainer "Matt McCright <matt.mccright@gmail.com>"
+# Use this image to issue single az commands. 
 # Converted to Debian from an alpine version 
 # by Jessie Frazelle <jess@linux.com>
 # https://github.com/jessfraz/dockerfiles/blob/master/azure-cli/Dockerfile
