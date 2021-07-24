@@ -1,11 +1,10 @@
 ## AWS has a lot of images ready to go.  Reuse their work.  
 
-For a broadly-reusable general development docker file model, see the "Ubuntu Standard 5.0" from AWS linked below.  
+For a broadly-reusable general development docker file model, see the "[Ubuntu Standard 5.0](https://github.com/aws/aws-codebuild-docker-images/tree/master/ubuntu/standard/5.0)" from AWS.  
 This seems like it would be useful for a broad spectrum of application development use cases.  
 And if expense management and runtime speed are high priorities, it also seems like an easy starting point for building your own optimized image.  
 Copy the dockerfile and remove the language/runtime/build tooling support that you don't need, and generate a lighter container.  
-See:  
-[https://github.com/aws/aws-codebuild-docker-images/blob/master/ubuntu/standard/5.0/runtimes.yml](https://github.com/aws/aws-codebuild-docker-images/blob/master/ubuntu/standard/5.0/runtimes.yml)  
+See: [https://github.com/aws/aws-codebuild-docker-images/tree/master/ubuntu/standard/5.0](https://github.com/aws/aws-codebuild-docker-images/tree/master/ubuntu/standard/5.0)  
 July 2021 runtimes:  
 * java: Java version 8 and 11  
 * golang: Go version 1.15.6  
