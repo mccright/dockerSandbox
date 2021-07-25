@@ -1,5 +1,64 @@
 # Install docker -- Various Environments  
 
+## Install docker on Ubuntu 20.04  
+
+### Install via snap
+```
+matt@mylt:~/Downloads$ sudo snap install docker
+docker 19.03.13 from Canonical✓ installed
+matt@mylt:~/Downloads$ docker --version
+Docker version 19.03.13, build cd8016b6bc
+```
+
+### Post-Install tasks
+```
+matt@mylt:~/Downloads$ sudo addgroup --system docker
+Adding group `docker' (GID 133) ...
+Done.
+matt@mylt:~/Downloads$ sudo adduser $USER docker
+Adding user `matt' to group `docker' ...
+Adding user matt to group docker
+Done.
+matt@mylt:~/Downloads$ newgrp docker
+Current OS: Ubuntu 20.04.2 LTS 'focal' (GNU/Linux 5.4.0-80-generic x86_64) - 5746928K
+matt@mylt:~/Downloads$ sudo snap disable docker
+docker disabled
+matt@mylt:~/Downloads$  sudo snap enable docker
+docker enabled
+matt@mylt:~/Downloads$ docker info
+<lots of info == success>
+
+matt@mylt:~/Downloads$ docker run hello-world
+Unable to find image 'hello-world:latest' locally
+latest: Pulling from library/hello-world
+b8dfde127a29: Pull complete 
+Digest: sha256:df5f5184104426b65967e016ff2ac0bfcd44ad7899ca3bbcf8e44e4461491a9e
+Status: Downloaded newer image for hello-world:latest
+
+Hello from Docker!
+This message shows that your installation appears to be working correctly.
+
+To generate this message, Docker took the following steps:
+ 1. The Docker client contacted the Docker daemon.
+ 2. The Docker daemon pulled the "hello-world" image from the Docker Hub.
+    (amd64)
+ 3. The Docker daemon created a new container from that image which runs the
+    executable that produces the output you are currently reading.
+ 4. The Docker daemon streamed that output to the Docker client, which sent it
+    to your terminal.
+
+To try something more ambitious, you can run an Ubuntu container with:
+ $ docker run -it ubuntu bash
+
+Share images, automate workflows, and more with a free Docker ID:
+ https://hub.docker.com/
+
+For more examples and ideas, visit:
+ https://docs.docker.com/get-started/
+
+matt@mylt:~/Downloads$
+```
+
 ## Install docker-ce on Ubuntu 18.04  
 
 Don't use the Docker installation package available in the official Ubuntu 18.04 repository (it will not reliably be the latest version).  
@@ -108,7 +167,7 @@ Log in again to refresh group memberships.
 Verify your work with:  
 
 ```
-docker container run hello-world  
+docker run hello-world  
 ```
 
 The output should include a "Hello from Docker" message and exit.  
