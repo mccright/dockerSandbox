@@ -6,7 +6,7 @@ matt@mylt:~/importantProj$ docker pull python
 ```
 Run the image, mounting a local code directory (the local directory in this example)  
 ```
-matt@mylt:~/importantProj$ docker run -d -it --rm --privileged --mount type=bind,source="$(pwd)",target=/code python
+matt@mylt:~/importantProj$ docker run -d -it --rm --privileged --mount type=bind,source="$(pwd)",target=/code --workdir /code python
 ```
 Get the container ID
 ```
