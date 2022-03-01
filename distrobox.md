@@ -13,7 +13,7 @@ Distrobox makes it easy to install packages in a number of [contained environmen
 
 Installing Distrobox is also easy.  
 
-```terminal
+```bash
 # Assuming an Ubuntu-based OS
 # install docker
 sudo apt install curl docker.io 
@@ -31,12 +31,12 @@ export PATH=$PATH:~/.local/bin
 ```
 
 Use the following command to start a container:  
-```terminal
+```bash
     distrobox create --image debian:stable --name debian
 ```
 This downloaded a Debian:stable Docker container and labeled it "debian."  
 To enter that container, use:  
-```terminal
+```bash
     distrobox enter --name debian 
 ```
 That worked too.  
@@ -44,7 +44,7 @@ That worked too.
 Now, set up a keyboard shortcut to open a qterminal and enter the debian container.  
 
 Open your keyboard shortcut mapper (mine is Lubuntu's Global Action Manager) set a key combination (I used Ctrl-Shift-D) to execute the following:  
-```terminal
+```bash
 /usr/bin/qterminal -e '/home/$USER/.local/bin/distrobox enter --name debian'
 ```
 
@@ -53,16 +53,16 @@ Then when you press Ctrl-Shift-D the system will present you with a new debian:s
 After a container is started or entered it remains running in the background.  
 
 List the installed containers with:  
-```terminal
+```bash
     distrobox list 
 ```
 
 If it is important to stop a container, use the Docker command:  
-```terminal
+```bash
     docker stop debian 
 ```
 
 You can stop and remove a running container with:  
-```terminal
+```bash
     distrobox rm --name debian --force 
 ```
