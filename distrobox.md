@@ -2,9 +2,11 @@
 
 Experimenting with a new operating system or maintaining several different complex development environments are common challenges.  
 
-Distrobox is a wrapper around podman or docker to create and start containers that are highly integrated with the hosts -- sharing your $HOME directory, external storage, external USB devices, as well as supporting graphical apps (X11/Wayland) and audio.  
+Distrobox is a wrapper around podman or docker to create and start containers that are highly integrated with their hosts -- sharing your host's $HOME directory, external storage, external USB devices, as well as supporting graphical apps (X11/Wayland) and audio.  
 
-* Home: [https://github.com/89luca89/distrobox/](https://github.com/89luca89/distrobox/)  
+This has been especially helpful for me when doing some early experimentation with a given Linux variant.  If a docker-enabled idea appears to be something worth pursuing, then you can then invest in a more proper docker-enabled configuration.  
+
+* Project Home: [https://github.com/89luca89/distrobox/](https://github.com/89luca89/distrobox/)  
 * Tested container images: https://github.com/89luca89/distrobox/blob/main/docs/compatibility.md#containers-distros](https://github.com/89luca89/distrobox/blob/main/docs/compatibility.md#containers-distros)  
 
 Distrobox guest containers are not designed to be secure environments -- rather to be convenient environments, with shared access to your home directory.  This idea and implementation supports [a range of use cases](https://github.com/89luca89/distrobox/#why).  
@@ -66,3 +68,8 @@ You can stop and remove a running container with:
 ```bash
     distrobox rm --name debian --force 
 ```
+
+
+#### Supporting References:  
+
+* "Run Distrobox on Fedora Linux." by Luca Di Maio, Dec 29, 2021 [https://fedoramagazine.org/run-distrobox-on-fedora-linux/](https://fedoramagazine.org/run-distrobox-on-fedora-linux/)  
