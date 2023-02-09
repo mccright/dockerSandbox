@@ -1,5 +1,7 @@
-FROM python:3.7-slim-buster
-LABEL maintainer "Matt McCright <matt.mccright@gmail.com>"
+FROM python:3.10-slim-buster
+LABEL maintainer "Matt McCright <matt.mccright@gmail.com>" 
+# Another option:
+# FROM python:3.10-slim-bullseye
 # Use this image to issue single az commands. 
 # Converted to Debian from an alpine version 
 # by Jessie Frazelle <jess@linux.com>
