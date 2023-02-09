@@ -2,6 +2,7 @@ FROM python:3.10-slim-buster
 LABEL maintainer "Matt McCright <matt.mccright@gmail.com>" 
 # Another option:
 # FROM python:3.10-slim-bullseye
+# Caution <version>-slim* does not contain all the common packages contained in the default tag and hosts only the minimal packages needed to run python.
 # Use this image to issue single az commands. 
 # Converted to Debian from an alpine version 
 # by Jessie Frazelle <jess@linux.com>
